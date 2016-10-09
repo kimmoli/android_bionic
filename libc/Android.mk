@@ -188,6 +188,7 @@ libc_bionic_src_files := \
     bionic/sched_getcpu.cpp \
     bionic/send.cpp \
     bionic/setegid.cpp \
+    bionic/__set_errno.cpp \
     bionic/seteuid.cpp \
     bionic/setpgrp.cpp \
     bionic/sigaction.cpp \
@@ -949,8 +950,6 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     $(libc_arch_static_src_files) \
-    $(libc_static_common_src_files) \
-    bionic/__set_errno.cpp \
     bionic/libc_init_static.cpp
 
 LOCAL_C_INCLUDES := $(libc_common_c_includes)
@@ -996,8 +995,6 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     $(libc_arch_static_src_files) \
-    $(libc_static_common_src_files) \
-    bionic/__set_errno.cpp \
     bionic/malloc_debug_common.cpp \
     bionic/libc_init_static.cpp \
 
